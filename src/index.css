@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background:
+    radial-gradient(circle at top left, rgba(16,185,129,0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(6,182,212,0.12), transparent 22%),
+    linear-gradient(180deg, #f8fbfa 0%, #eef7f4 50%, #eaf4f3 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(8px);
+}
+
+tbody tr {
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+tbody tr:hover {
+  background: rgba(16, 185, 129, 0.035);
+}
+
+button, .transition {
+  will-change: transform, opacity, box-shadow;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(148, 163, 184, 0.12);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 23, 42, 0.22);
+  border-radius: 999px;
+}
+
+@media (max-width: 1280px) {
+  body {
+    background:
+      radial-gradient(circle at top left, rgba(16,185,129,0.09), transparent 30%),
+      linear-gradient(180deg, #f8fbfa 0%, #eef7f4 55%, #eaf4f3 100%);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background:
+      linear-gradient(180deg, #f8fbfa 0%, #eef7f4 65%, #eaf4f3 100%);
+  }
+}
+
+
+/* DairyScope corporate card/table system */
+.ds-card table {
+  font-size: 0.86rem;
+}
+
+.ds-card th {
+  background: rgba(248, 250, 252, 0.96);
+  color: #334155;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.ds-card th,
+.ds-card td {
+  padding-top: 0.78rem;
+  padding-bottom: 0.78rem;
+}
+
+.ds-card tbody tr:nth-child(even) {
+  background: rgba(248, 250, 252, 0.42);
+}
+
+.ds-card input,
+.ds-card select,
+.ds-card textarea {
+  min-height: 2.7rem;
+}
+
+.ds-card .overflow-x-auto {
+  border-radius: 1.35rem;
+}
+
+@media (max-width: 1024px) {
+  .ds-card table {
+    font-size: 0.82rem;
+  }
+}
