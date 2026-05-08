@@ -1,4 +1,0 @@
-{
-  "installCommand": "npm install --no-package-lock --prefer-online",
-  "buildCommand": "npm run build"
-}
